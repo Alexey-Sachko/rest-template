@@ -5,9 +5,9 @@ ENV PORT 8080
 EXPOSE 8080
 
 RUN mkdir -p /usr/bin/rest
+WORKDIR /usr/bin/rest
 
-COPY package.json /usr/bin/backend/
-COPY src /usr/bin/backend/
+COPY . /usr/bin/rest/
 
 RUN npm install
 
