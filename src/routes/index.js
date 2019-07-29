@@ -1,11 +1,9 @@
 import Router from 'koa-router';
-
+import usersRouter from './users';
 
 const router = new Router();
 
-router.get('/', ctx => {
-  ctx.body = 'hello world'
-})
+router.use('/users', usersRouter.routes())
 
 
 export const routes = () => router.routes();

@@ -19,6 +19,7 @@
     "@babel/runtime": "^7.5.5",
     "dotenv": "^8.0.0",
     "koa": "^2.7.0",
+    "koa-morgan": "^1.0.1",
     "koa-router": "^7.4.0"
   }
 }
