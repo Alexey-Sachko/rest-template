@@ -1,6 +1,9 @@
 import Koa from 'koa';
+import dotenv from 'dotenv';
 
+dotenv.config();
 const app = new Koa();
+const port = process.env.PORT;
 
 app.use(async (ctx, next) => {
     ctx.set('Access-Control-Allow-Origin', '*');
@@ -9,6 +12,6 @@ app.use(async (ctx, next) => {
     await next();
   });
 
-app.listen('3000', function () {
-    console.log('%s listening at port %d');
+app.listen(port, function () {
+    console.log(`listening at port ${port}`);
 });
